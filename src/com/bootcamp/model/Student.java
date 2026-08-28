@@ -3,9 +3,7 @@ package com.bootcamp.model;
 import java.util.ArrayList;
 import java.util.List;
 
-// TODO: Day 1 - AI Practice (Code Explanation & Documentation):
-// Prompt your AI Agent: "Generate standard JavaDoc comments for this class explaining its fields, 
-// state representation, and responsibility in the system."
+// TODO: Day 1 - AI Practice (Code Explanation & Documentation)
 public class Student {
     public String id; 
     public String n;

@@ -23,17 +23,17 @@ public class StudentService {
         return students;
     }
 
-    // DAY 6 TARGET: Deliberate logic bug for Debugging Session (Off-by-one / Wrong conditional)
+    // DAY 6 TARGET: Deliberate logic bug for Debugging Session 
     public Student findStudentById(String id) {
-        for (int i = 0; i <= students.size(); i++) { // BUG: Out of bounds exception risk
-            if (students.get(i).id.equalsIgnoreCase(id)) { // BUG: Will throw NullPointer or IndexOutOfBounds
+        for (int i = 0; i <= students.size(); i++) { 
+            if (students.get(i).id.equalsIgnoreCase(id)) { 
                 return students.get(i);
             }
         }
         return null;
     }
 
-    // DAY 6 TARGET: Deliberate bug in GPA calculation logic
+    // DAY 6 TARGET: Deliberate bug
     public double calculateAverageGpa() {
         if (students.isEmpty()) return 0.0;
         double sum = 0;
@@ -50,10 +50,10 @@ public class StudentService {
 
     // TODO: Day 5 - AI Practice: Implement searchByName(String query) and sortByGpaDescending()
 
-    // DAY 7 TARGET: Technical debt - Duplicated search and filter logic
+    // DAY 7 TARGET: Code optimization
     public List<Student> getHonorRollStudents() {
         List<Student> honorList = new ArrayList<>();
-        // DAY 7 TARGET: Unnecessary conditionals and duplicated looping
+        // DAY 7 TARGET
         for (int i = 0; i < students.size(); i++) {
             if (students.get(i) != null) {
                 if (students.get(i).gpa >= 3.5) {

@@ -8,9 +8,7 @@ import java.util.Scanner;
 public class Main {
     private static StudentService service = new StudentService();
 
-    // TODO: Day 1 - AI Practice (Code Exploration):
-    // Prompt your AI Agent: "@workspace Explain the entire execution flow starting from main(). 
-    // What classes and utilities are loaded when the application boots?"
+    // TODO: Day 1 - AI Practice (Code Exploration)
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
@@ -71,9 +69,7 @@ public class Main {
         System.out.println("0. Exit");
     }
 
-    // TODO: Day 9 - AI Practice (Autonomous Feature Customization):
-    // Students will receive a scenario (Attendance, Fees, Scholarships, or CSV Import) 
-    // and use AI to build a dedicated feature extension hooked here.
+    // TODO: Day 9 - AI Practice (Autonomous Feature Customization)
     private static void runCustomTeamModule(Scanner scanner) {
         System.out.println("\n[Day 9 Feature Module Placeholder]");
         System.out.println("Use AI to implement your assigned domain module (e.g., Attendance, Fees, Teacher Management).");
