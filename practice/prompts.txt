@@ -1,5 +1,6 @@
+=====================================
 In-class Practice Prompts - Day 02
-----------------------------------
+=====================================
 
 -------------------------------------------
 Task 1: Refactoring Class Encapsulation
@@ -33,6 +34,45 @@ Example Output:
 public void save(String studentData) { ... }
 Task: Apply this exact JavaDoc layout and comment style to every method in @file:StudentService.java.
 
+=====================================
+In-class Practice Prompts - Day 03
+=====================================
+
+---------------------------------------------------------
+Task 1: Iteration 1 (Broad Prompt) — Generate Course.java
+---------------------------------------------------------
+[Role] You are a Java Developer.
+
+[Task] Create a new Course.java model class with courseId, courseName, and maxCapacity.
+
+[Context] Java 25 console application in #codebase.
+
+[Constraints] Keep it simple.
+
+[Output] Standard Java class code.
+
+[Verification] Ensure it compiles.
+
+---------------------------------------------------------------
+Task 2: Iteration 2 (Adding Constraints) - Refactor Course.java
+---------------------------------------------------------------
+[Role] You are a Senior Java Engineer.
+
+[Task] Refactor @file:Course.java to add defensive validation and proper state checks.
+
+[Context] Target file is Course.java.
+
+[Constraints]
+
+1. Use java.util.Objects to validate non-null courseId and courseName.
+
+2. Throw IllegalArgumentException if maxCapacity is less than or equal to zero.
+
+3. Implement equals(), hashCode(), and toString().
+
+[Output] Return updated Course.java along with a list of defensive checks added.
+
+[Verification] Confirm no compilation errors occur in VS Code.
 
 
 
