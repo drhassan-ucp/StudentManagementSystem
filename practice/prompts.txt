@@ -1,1 +1,38 @@
-In-class Practice Prompts
+In-class Practice Prompts - Day 02
+----------------------------------
+
+-------------------------------------------
+Task 1: Refactoring Class Encapsulation
+-------------------------------------------
+
+[Role] Act as a Senior Java Software Engineer specializing in code improvement.
+
+[Task] Refactor @file:Student.java to enforce proper field encapsulation and standard Java conventions. Change public fields (like public String n;) to private fields with descriptive camelCase names (e.g., name, gpa). Generate standard getters and setters for all fields.
+
+[Context] Target file is Student.java inside a Java project.
+
+[Constraints] Do not introduce third-party libraries. Preserve existing constructor capabilities.
+
+[Output] Provide only the updated Student.java class code followed by a bulleted list of modified field names.
+
+[Verification] List the methods in StudentService.java or Main.java that will need variable updates as a result of this change.
+
+-----------------------------------------------------------------
+Task 2: Standardizing Documentation (Applying Few-Shot Prompting)
+-----------------------------------------------------------------
+
+ #codebase/@workspace Refactor the methods in StudentService.java to include uniform JavaDoc documentation.
+Example Input:
+public void save(String s) { ... }
+Example Output:
+/**
+* Saves a student entity to the primary repository.
+* @param studentData The raw formatted string representing student information.
+* @throws IllegalArgumentException if studentData is null or malformed.
+*/
+public void save(String studentData) { ... }
+Task: Apply this exact JavaDoc layout and comment style to every method in @file:StudentService.java.
+
+
+
+
