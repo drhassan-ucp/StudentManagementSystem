@@ -22,7 +22,7 @@ Task 1: Refactoring Class Encapsulation
 Task 2: Standardizing Documentation (Applying Few-Shot Prompting)
 -----------------------------------------------------------------
 
- #codebase/@workspace Refactor the methods in StudentService.java to include uniform JavaDoc documentation.
+Refactor the methods in @file:StudentService.java to include uniform JavaDoc documentation.
 Example Input:
 public void save(String s) { ... }
 Example Output:
