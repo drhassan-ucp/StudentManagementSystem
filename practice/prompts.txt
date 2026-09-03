@@ -35,7 +35,7 @@ public void save(String studentData) { ... }
 Task: Apply this exact JavaDoc layout and comment style to every method in @file:StudentService.java.
 
 =====================================
-In-class Practice Prompts - Day 03
+In-class Practice Prompts - Day 03-04
 =====================================
 
 ---------------------------------------------------------
@@ -46,8 +46,6 @@ Task 1: Iteration 1 (Broad Prompt) — Generate Course.java
 [Task] Create a new Course.java model class with courseId, courseName, and maxCapacity.
 
 [Context] Java 25 console application in #codebase.
-
-[Constraints] Keep it simple.
 
 [Output] Standard Java class code.
 
@@ -68,11 +66,26 @@ Task 2: Iteration 2 (Adding Constraints) - Refactor Course.java
 
 2. Throw IllegalArgumentException if maxCapacity is less than or equal to zero.
 
-3. Implement equals(), hashCode(), and toString().
+3. Implement equals() and toString().
 
 [Output] Return updated Course.java along with a list of defensive checks added.
 
 [Verification] Confirm no compilation errors occur in VS Code.
 
+
+---------------------------------------------------------
+Task 3:  Iteration 3 (Self-Critique & Edge Cases) 
+---------------------------------------------------------
+[Role] You are a Lead QA Analyst.
+
+[Task] Analyze and self-critique the following enrollment method logic in @file:CourseService.java.
+
+[Context] We are adding enrollStudent(String studentId, String courseId) using existing StudentService and Course structures in @workspace.
+
+[Constraints] Identify at least 3 edge cases or failure modes (e.g., student already enrolled, non-existent ID, max capacity reached).
+
+[Output] Provide a short critique report detailing potential bugs, followed by the corrected, hardened CourseService.java code.
+
+[Verification] Provide a manual step-by-step test case to execute in Main.java to prove the fixes work.
 
 
