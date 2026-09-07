@@ -87,8 +87,77 @@ Task 3:  Iteration 3 (Self-Critique & Edge Cases)
 [Output] Provide a short critique report detailing potential bugs, followed by the corrected, hardened code.
 
 =====================================
-In-class Practice Prompts - Day 05
+In-class Practice Prompts - Day 05&06
 =====================================
+
+---------------------------------------------------------
+Task 1: Update Student.java (Course List Tracking)
+---------------------------------------------------------
+Role: Act as a Senior Java Developer specializing in core object-oriented design.
+Task: Refactor @file:Student.java to track enrolled courses using an encapsulated list. Add low-level entity methods: addEnrolledCourse(String courseId), removeEnrolledCourse(String courseId), and getEnrolledCourses() (returning an unmodifiable list).
+Context: Target #codebase is a Java 25 console application.
+Constraints:
+1. Prevent duplicate course enrollments inside addEnrolledCourse().
+2. DO NOT change existing field getters/setters or constructor signatures.
+3. DO NOT place business workflow logic (like capacity checks or printing user UI messages) inside Student.java.
+Output: Return the complete updated Student.java file followed by a list of added methods.
+Verification: Provide 3 lines of code in Main.java that enroll a student and print their active courses.
+
+
+---------------------------------------------------------
+Task 2: Create CourseService.java Base Class (Iteration 1)
+---------------------------------------------------------
+Role: Act as a Java Software Engineer.
+
+Task: Create a new service class named CourseService.java with methods: addCourse(Course course), getCourseById(String courseId), and enrollStudentInCourse(String studentId, String courseId). 
+
+Context: The project contains @file:Student.java and @file:Course.java in #codebase.
+
+Constraints:
+Keep logic plain and basic without advanced error checks for now.
+
+Output: Return the complete CourseService.java class code.
+
+Verification: Specify how CourseService should be instantiated inside Main.java
+
+
+---------------------------------------------------------
+Task 3: Wire CourseService Dependencies (Iteration 2) 
+---------------------------------------------------------
+Role: Act as a Systems Integration Engineer.
+Task: Integrate CourseService.java dependencies across @file:StudentService.java and @file:Main.java. Pass StudentService into CourseService via constructor injection so CourseService can look up students by ID. Update Main.java menu to include course options: [6] Add Course, [7] Enroll Student in Course, [8] Drop Student Course, [9] View Enrolled Courses. 
+Context: We now have Student.java, Course.java, StudentService.java, and CourseService.java, which need to be integrated with the main menu. 
+Constraints:
+DO NOT break existing menu options (1–5) in @file:Main.java.
+DO NOT change existing functionality in @file:Student.java, @file:StudentService.java and @file:CourseService.java
+Output: Provide updated snippets for @file:CourseService.java constructor and the new menu cases for Main.java.
+Verification: List the execution order in Main.java to verify that StudentService is initialized before CourseService.
+
+
+---------------------------------------------------------
+Task 4: Iteration 3 (Self-Critique & Edge Cases) 
+---------------------------------------------------------
+Role: You are a Lead QA Analyst.
+
+Task: Analyze and self-critique the logic of the enroll student method in @file: CourseService.java.
+
+Context: enrollStudentInCourse(String studentId, String courseId). in CourseService.java. 
+
+Constraints: Identify at least 3 edge cases or failure modes (e.g., student already enrolled, non-existent ID, max capacity reached).
+
+Output: Provide a short critique report detailing potential bugs, followed by the corrected, hardened CourseService.java code.
+
+Verification: Provide a manual step-by-step test case to execute in Main.java to check that the fixes work.
+
+
+
+
+
+
+
+
+
+
 
 
 
