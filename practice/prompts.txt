@@ -160,11 +160,12 @@ Task 1: Generate unit tests for Student.java
 ---------------------------------------------------------
 Role: Act as a Senior Test Automation Engineer specializing in Java and JUnit 5.
 Task: Create a comprehensive unit test class StudentTest.java, to verify all state-modifying methods in @file:Student.java. You must:
-Apply the AAA Pattern (Arrange, Act, Assert) explicitly inside every test method.
-Set up explicit Test Data (e.g., student IDs, course strings) at the start of each test.
-Define the Test Sequence clearly.
-Validate results against the Test Oracle using JUnit 5 Assertions (assertEquals, assertTrue, assertThrows).
-Write edge-case tests asserting that passing null or blank strings to addEnrolledCourse().
+1. Environment & Dependency Check: Before writing the test, check if JUnit 5 (junit-jupiter-api and junit-jupiter-engine JARs) exist in the project lib/ directory. If missing, write a PowerShell / Bash script or terminal command to download the standalone JAR files directly into lib/ and update .vscode/settings.json to include "java.project.referencedLibraries": ["lib/**/*.jar"].
+2. Apply the AAA Pattern (Arrange, Act, Assert) explicitly inside every test method.
+3. Set up explicit Test Data (e.g., student IDs, course strings) at the start of each test.
+4. Define the Test Sequence clearly.
+5. Validate results against the Test Oracle using JUnit 5 Assertions (assertEquals, assertTrue, assertThrows).
+6. Write edge-case tests asserting that passing null or blank strings to addEnrolledCourse().
 Context: Target entity is Student.java in @workspace/#codebase, containing studentId, name, and enrolledCourses (List<String>).
 Constraints:
 DO NOT use Mockito, @Mock, or any external test doubles for this entity test.
@@ -173,15 +174,15 @@ DO NOT modify the existing source code in Student.java.
 Output: Return the complete StudentTest.java class with descriptive @DisplayName annotations on all test cases.
 Verification: State the terminal command to compile and run this single unit test class directly.
 
-
 ---------------------------------------------------------
 Task 2: Test Mocking with Mockito for StudentService.java
 ---------------------------------------------------------
 Role: Act as a Senior Test Automation Engineer specializing in Java and JUnit 5.
 Task: Create CourseServiceTest.java using Mockito to test enrollStudentInCourse() and dropStudentFromCourse() in @file:CourseService.java. You must:
-Create a Mock object for StudentService and program canned responses using Mockito.when(...).thenReturn(...) to satisfy preconditions.
-Test 3 distinct scenarios: (a) Successful enrollment, (b) Enrollment attempt when course capacity is full (assertThrows), and (c) Dropping a course successfully.
-Verify mock interactions explicitly against the expected sequence using Mockito.verify(studentService, times(1)).getStudentById(...).
+1. Environment & Dependency Check: Check if Mockito Core (mockito-core), Mockito JUnit Jupiter (mockito-junit-jupiter), and ByteBuddy JARs exist in the project lib/ directory. If missing, generate the commands/script to download these required JARs into lib/ and confirm .vscode/settings.json referencing "lib/**/*.jar".
+2. Create a Mock object for StudentService and program canned responses using Mockito.when(...).thenReturn(...) to satisfy preconditions.
+3. Test 3 distinct scenarios: (a) Successful enrollment, (b) Enrollment attempt when course capacity is full (assertThrows), and (c) Dropping a course successfully.
+4. Verify mock interactions explicitly against the expected sequence using Mockito.verify(studentService, times(1)).getStudentById(...).
 Context: CourseService depends on StudentService to look up Student entities and manages an internal list of Course entities.
 Constraints:
 DO NOT mock the class under test (CourseService); mock only its dependency (StudentService).
