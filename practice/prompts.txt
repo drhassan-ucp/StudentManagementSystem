@@ -139,11 +139,12 @@ Task 4: Iteration 3 (Self-Critique & Edge Cases)
 ---------------------------------------------------------
 Role: You are a Lead QA Analyst.
 
-Task: Analyze and self-critique the logic of the enroll student method in @file: CourseService.java.
+Task: Analyze and self-critique the logic of the enroll student method in @file: CourseService.java. Identify at least 3 edge cases or failure modes (e.g., student already enrolled, non-existent ID, max capacity reached).
 
 Context: enrollStudentInCourse(String studentId, String courseId). in CourseService.java. 
 
-Constraints: Identify at least 3 edge cases or failure modes (e.g., student already enrolled, non-existent ID, max capacity reached).
+Constraints:
+DO Not change existing functionality.
 
 Output: Provide a short critique report detailing potential bugs, followed by the corrected, hardened CourseService.java code.
 
