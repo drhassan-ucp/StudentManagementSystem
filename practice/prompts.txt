@@ -151,9 +151,44 @@ Output: Provide a short critique report detailing potential bugs, followed by th
 Verification: Provide a manual step-by-step test case to execute in Main.java to check that the fixes work.
 
 
+=====================================
+In-class Practice Prompts - Day 06&07
+=====================================
+
+---------------------------------------------------------
+Task 1: Generate unit tests for Student.java
+---------------------------------------------------------
+Role: Act as a Senior Test Automation Engineer specializing in Java and JUnit 5.
+Task: Create a comprehensive unit test class StudentTest.java, to verify all state-modifying methods in @file:Student.java. You must:
+Apply the AAA Pattern (Arrange, Act, Assert) explicitly inside every test method.
+Set up explicit Test Data (e.g., student IDs, course strings) at the start of each test.
+Define the Test Sequence clearly.
+Validate results against the Test Oracle using JUnit 5 Assertions (assertEquals, assertTrue, assertThrows).
+Write edge-case tests asserting that passing null or blank strings to addEnrolledCourse().
+Context: Target entity is Student.java in @workspace/#codebase, containing studentId, name, and enrolledCourses (List<String>).
+Constraints:
+DO NOT use Mockito, @Mock, or any external test doubles for this entity test.
+DO NOT write empty assertion checks (every test method must contain at least one explicit JUnit 5 assertion).
+DO NOT modify the existing source code in Student.java.
+Output: Return the complete StudentTest.java class with descriptive @DisplayName annotations on all test cases.
+Verification: State the terminal command to compile and run this single unit test class directly.
 
 
-
+---------------------------------------------------------
+Task 2: Test Mocking with Mockito for StudentService.java
+---------------------------------------------------------
+Role: Act as a Senior Test Automation Engineer specializing in Java and JUnit 5.
+Task: Create CourseServiceTest.java using Mockito to test enrollStudentInCourse() and dropStudentFromCourse() in @file:CourseService.java. You must:
+Create a Mock object for StudentService and program canned responses using Mockito.when(...).thenReturn(...) to satisfy preconditions.
+Test 3 distinct scenarios: (a) Successful enrollment, (b) Enrollment attempt when course capacity is full (assertThrows), and (c) Dropping a course successfully.
+Verify mock interactions explicitly against the expected sequence using Mockito.verify(studentService, times(1)).getStudentById(...).
+Context: CourseService depends on StudentService to look up Student entities and manages an internal list of Course entities.
+Constraints:
+DO NOT mock the class under test (CourseService); mock only its dependency (StudentService).
+DO NOT allow database or storage calls during test execution.
+DO NOT omit interaction verification (Mockito.verify must be called).
+Output: Return the complete, compile-ready CourseServiceTest.java file.
+Verification: Provide the simple terminal command to run CourseServiceTest.java and confirm test results.
 
 
 
