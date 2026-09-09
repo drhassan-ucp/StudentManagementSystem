@@ -203,20 +203,20 @@ Task: Fix the division-by-zero bug in @file:StudentService.java inside calculate
 1. Inspect the denominator evaluation (students.size()) to prevent division by zero when the students list is empty.
 2. Add evaluation logic before or during the division calculation to guarantee the method returns 0.0 if students contains zero elements or if the valid count is zero.
 3. Prevent any potential ArithmeticException (or Double.NaN / Double.INFINITY floating-point calculation errors) from being produced or returned to the caller.
-Context: Method calculateAverageGpa() is causing 0 / 0 execution branches when calculating averages on empty student collections..
+Context: Method calculateAverageGpa() is causing 0 / 0 execution branches when calculating averages on empty student collections.
 Constraints:
 1. DO NOT allow the method to return Double.NaN or Double.POSITIVE_INFINITY.
 2. DO NOT simply catch ArithmeticException with an empty try-catch block.
 Output: Return the updated calculateAverageGpa() method in @file:StudentService.java.
-Verification: State the test to run in StudentServiceTest.java to verify  to verify that an empty list returns 0.0 without crashing.
+Verification: State the test to run in StudentServiceTest.java to verify that an empty list returns 0.0 without crashing.
 
 ---------------------------------------------------------
 Task 2: Identify and Fix Bug 2 (Boundary Leaks)
 ---------------------------------------------------------
 Role: Act as a Senior QA Specialist.
-Task:  Fix the capacity overflow defect in @file:CourseService.java inside enrollStudentInCourse() . You must:
-1. Locate the boundary check logic comparing enrolled count against course.getMaxCapacity() .
-2. Correct the relational operator to reject enrollment when countEnrolledStudents reaches or exceeds maxCapacity .
+Task:  Fix the capacity overflow defect in @file:CourseService.java inside enrollStudentInCourse(). You must:
+1. Locate the boundary check logic comparing enrolled count against course.getMaxCapacity().
+2. Correct the relational operator to reject enrollment when countEnrolledStudents reaches or exceeds maxCapacity.
 3. Throw an IllegalStateException("Course capacity reached") instead of returning silently when full.
 Context: Courses allow enrollment beyond maxCapacity in enrollStudentInCourse().
 Constraints:
