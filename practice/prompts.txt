@@ -365,10 +365,10 @@ Identify potential conflicts and explain how existing functionality will be pres
 ---------------------------------------------------------
 Task 4: Implement Feature 1 — Personal Details
 ---------------------------------------------------------
-R — ROLE
+ROLE
 Act as a senior Java developer working on an existing student management system.
 
-T — TASK
+TASK
 Implement the Student Personal Details feature according to the approved plan.
 Add:
 - phone number
