@@ -225,5 +225,214 @@ Constraints:
 Output: Return the updated enrollStudentInCourse() method in @file:CourseService.java.
 Verification: State the test to run in  CourseServiceTest.java to verify capacity boundaries.
 
+=====================================
+In-class Practice Prompts - Day 09
+=====================================
+
+---------------------------------------------------------
+Task 1: Analyze the existing system with Kilo Code
+---------------------------------------------------------
+ROLE
+Act as a senior Java software architect performing a codebase analysis.
+
+TASK
+Analyze the current Student Management System and prepare a plan for evolving it into version 2.0.
+Inspect:
+- package structure
+- classes
+- current student functionality
+- data storage
+- services
+- utilities
+- application entry point
+- build/run configuration (if any)
+
+CONTEXT
+This is an existing StudentManagementSystem in the workspace, a Java console application.
+
+CONSTRAINTS
+- Do NOT modify source files.
+- Do NOT create implementation files.
+- Do not assume functionality that is not present.
+- Preserve existing functionality.
+- Base the analysis on the actual codebase.
+
+OUTPUT
+Provide:
+1. Current architecture
+2. Classes and responsibilities
+3. Existing functionality
+4. Current data-storage approach
+5. Existing CRUD operations
+6. Design/code-quality issues
+7. Recommended v2.0 architecture
+8. Suggested new modules
+9. Implementation plan
+
+VERIFICATION
+Verify your analysis against the actual project files.
+Identify assumptions or anything you could not determine.
+
+---------------------------------------------------------
+Task 2: Create branch for Git
+---------------------------------------------------------
+ROLE
+Act as a senior Git engineer.
+
+TASK
+Create an isolated development branch for StudentManagementSystem v2.0.
+
+CONTEXT
+The current application is on main, and we will add several new features.
+
+CONSTRAINTS
+- Create branch:
+  feature/student-management-v2
+- Base it on main.
+- Do not modify main.
+- Do not implement features yet.
+
+OUTPUT
+Report the current branch, new branch, and working-tree status.
+
+VERIFICATION
+Verify the branch and Git status before reporting success.
+
+---------------------------------------------------------
+Task 3: Ask Kilo to create the implementation plan
+---------------------------------------------------------
+
+ROLE
+Act as a senior Java architect and technical lead.
+
+TASK
+Create an implementation plan for StudentManagementSystem v2.0.
+
+CONTEXT
+We are working on:
+feature/student-management-v2
+
+The existing system manages students.
+
+We want to add:
+
+1. Student Personal Details
+   - phone
+   - email
+   - address
+   - date of birth
+   - emergency contact
+
+2. Attendance Management
+   - attendance record
+   - date
+   - student
+   - status
+   - optional subject/course
+   - attendance percentage
+3. Timetable View
+   - course/subject
+   - day
+   - start time
+   - end time
+   - room
+
+CONSTRAINTS
+- Preserve all existing functionality.
+- Follow the existing Java architecture where appropriate.
+- Avoid unnecessary frameworks.
+- Keep the console application.
+- Use appropriate OOP principles.
+- Do not introduce PostgreSQL yet.
+- Do not implement anything yet.
+
+OUTPUT
+Provide:
+1. Proposed classes
+2. Proposed packages
+3. Relationships between classes
+4. New services
+5. Changes to existing classes
+6. Menu/UI changes
+7. Validation requirements
+8. Testing strategy
+9. Ordered implementation steps
+
+VERIFICATION
+Compare the proposed design with the existing codebase.
+Identify potential conflicts and explain how existing functionality will be preserved.
+
+---------------------------------------------------------
+Task 4: Implement Feature 1 — Personal Details
+---------------------------------------------------------
+R — ROLE
+Act as a senior Java developer working on an existing student management system.
+
+T — TASK
+Implement the Student Personal Details feature according to the approved plan.
+Add:
+- phone number
+- email
+- address
+- date of birth
+- emergency contact
+
+Integrate the feature with the existing Student Management System.
+
+CONTEXT
+We are working on: feature/student-management-v2
+
+CONSTRAINTS
+- Preserve existing functionality.
+- Follow the approved architecture.
+- Do not rewrite unrelated classes.
+- Use appropriate encapsulation.
+- Validate user input.
+- Keep the console-based interface.
+- Keep the implementation understandable for undergraduate developers.
+
+OUTPUT
+Implement in project files:
+- required model changes/classes
+- menu/UI changes
+- tests where appropriate
+- README updates if needed
+
+VERIFICATION
+Compile the project.
+Run the application.
+Test adding and updating personal details.
+Test invalid input.
+Report the files changed and test results.
+
+---------------------------------------------------------
+Task 5: Implement Feature 2 — Attendance
+---------------------------------------------------------
+TODO: 
+Attendance should allow the system to:
+- record attendance date
+- record attendance status
+- associate attendance with a student
+- view attendance records
+- calculate attendance percentage
+
+
+---------------------------------------------------------
+Task 6: Implement Feature 3 — Timetable
+---------------------------------------------------------
+TODO: 
+The timetable should support:
+- course/subject
+- day
+- start time
+- end time
+- room
+
+---------------------------------------------------------
+Task 7: Release preparation and commit
+---------------------------------------------------------
+TODO: 
+Prepare Student Management System v2.0 for release and make the Kilo Code commit.
+
 
 
