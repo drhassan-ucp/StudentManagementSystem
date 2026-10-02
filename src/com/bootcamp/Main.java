@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class Main {
     private static StudentService service = new StudentService();
 
-    // TODO: Day 1 - AI Practice (Code Exploration)
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
@@ -69,7 +68,6 @@ public class Main {
         System.out.println("0. Exit");
     }
 
-    // TODO: Day 9 - AI Practice (Autonomous Feature Customization)
     private static void runCustomTeamModule(Scanner scanner) {
         System.out.println("\n[Day 9 Feature Module Placeholder]");
         System.out.println("Use AI to implement your assigned domain module (e.g., Attendance, Fees, Teacher Management).");
