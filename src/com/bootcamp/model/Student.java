@@ -3,7 +3,6 @@ package com.bootcamp.model;
 import java.util.ArrayList;
 import java.util.List;
 
-// TODO: Day 1 - AI Practice (Code Explanation & Documentation)
 public class Student {
     public String id; 
     public String n;
