@@ -44,7 +44,6 @@ public class Main {
                     System.out.println("Average GPA: " + service.calculateAverageGpa());
                     break;
                 case 9:
-                    // DAY 9 TARGET: Extensibility Hook
                     runCustomTeamModule(scanner);
                     break;
                 case 0:
@@ -64,12 +63,12 @@ public class Main {
         System.out.println("2. Add New Student");
         System.out.println("3. Find Student by ID (Buggy)");
         System.out.println("4. Display Class GPA Average (Buggy)");
-        System.out.println("9. Custom Team Module (Day 9 Challenge)");
+        System.out.println("9. Custom Team Module ");
         System.out.println("0. Exit");
     }
 
     private static void runCustomTeamModule(Scanner scanner) {
-        System.out.println("\n[Day 9 Feature Module Placeholder]");
+        System.out.println("\n[Feature Module Placeholder]");
         System.out.println("Use AI to implement your assigned domain module (e.g., Attendance, Fees, Teacher Management).");
     }
 
